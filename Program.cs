@@ -6,8 +6,9 @@ namespace CatWorx.BadgeMaker
   {
     static void Main(string[] args)
     {
+      // Dictionaries
       Dictionary<string, int> kpopGroups = new Dictionary<string, int>(){
-        {"BTS", 7}, // members
+        {"BTS", 7}, //Key: Group Name | Value: Number of members
         {"BlackPink", 4},
         {"Twice", 9},
         {"Red Velvet", 5},
@@ -25,6 +26,14 @@ namespace CatWorx.BadgeMaker
       Console.WriteLine("      Red Velvet | {0}", kpopGroups["Red Velvet"]);
       Console.WriteLine("             EXO | {0}", kpopGroups["EXO"]);
       Console.WriteLine("Girls Generation | {0}", kpopGroups["Girls Generation"]);
+
+      // Arrays
+      string [] bangtanSongs = new string[4]{ "Spring Day", "Save Me", "Silver Spoon", "DNA"};
+      string firstSong = bangtanSongs[0];
+      string secondSong = bangtanSongs[1];
+      string thirdSong = bangtanSongs[2];
+      string lastSong = bangtanSongs[3];
+      Console.WriteLine("My Top 3 BTS Songs are {0}, {1}, {2} and my favorite song of all time is {3}", secondSong, thirdSong, lastSong, firstSong);
 
     }
   }
