@@ -33,7 +33,14 @@ namespace CatWorx.BadgeMaker
       string secondSong = bangtanSongs[1];
       string thirdSong = bangtanSongs[2];
       string lastSong = bangtanSongs[3];
-      Console.WriteLine("My Top 3 BTS Songs are {0}, {1}, {2} and my favorite song of all time is {3}", secondSong, thirdSong, lastSong, firstSong);
+      Console.WriteLine("----------------");
+      Console.WriteLine("My Top 3 BTS Songs are {0}, {1}, {2} and my favorite song of all time is {3}.", secondSong, thirdSong, lastSong, firstSong);
+
+      // Lists
+      List<string> bangtanies = new List<string>() { "Namjoon", "Seokjin", "Yoongi", "Hoseok", "Jimin", "Taehyung", "Jungkook"};
+      Console.WriteLine("----------------");
+      Console.WriteLine("The hyung line includes {0}, {1}, {2} and {3} who is also the group's leader.", bangtanies[1], bangtanies[2], bangtanies[3], bangtanies[0]);
+      Console.WriteLine("The maknae line includes {0}, {1}, and {2}.", bangtanies[4], bangtanies[5], bangtanies[6] );
 
     }
   }
