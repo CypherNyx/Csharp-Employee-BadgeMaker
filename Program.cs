@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker
 {
@@ -6,29 +6,26 @@ namespace CatWorx.BadgeMaker
   {
     static void Main(string[] args)
     {
-      Console.WriteLine(2 * 3);         // Basic Arithmetic: +, -, /, * {6}
-Console.WriteLine(10 % 3);        // Modulus Op => remainder of 10/3 {1}
-Console.WriteLine(1 + 2 * 3);     // order of operations  {7}
-Console.WriteLine(10 / 3.0);      // int's and doubles 
-Console.WriteLine(10 / 3);        // int's 
-Console.WriteLine("12" + "3");    // What happens here? {123}
+      Dictionary<string, int> kpopGroups = new Dictionary<string, int>(){
+        {"BTS", 7}, // members
+        {"BlackPink", 4},
+        {"Twice", 9},
+        {"Red Velvet", 5},
+        {"EXO", 9},
+        {"Girls Generation", 8}
+      };
 
-int num = 10;
-num += 100;
-Console.WriteLine(num); //110
-num ++;
-Console.WriteLine(num); //111
+      Console.WriteLine("----------------");
+      Console.WriteLine("Kpop Groups");
+      Console.WriteLine("----------------");
+      Console.WriteLine("           Group | Members");
+      Console.WriteLine("             BTS | {0}", kpopGroups["BTS"] );
+      Console.WriteLine("       BlackPink | {0}", kpopGroups["BlackPink"]);
+      Console.WriteLine("           Twice | {0}", kpopGroups["Twice"]);
+      Console.WriteLine("      Red Velvet | {0}", kpopGroups["Red Velvet"]);
+      Console.WriteLine("             EXO | {0}", kpopGroups["EXO"]);
+      Console.WriteLine("Girls Generation | {0}", kpopGroups["Girls Generation"]);
 
-bool isCold = true; // Booleans
-Console.WriteLine(isCold ? "drink" : "add ice"); // output: drink
-Console.WriteLine(!isCold ? "drink" : "add ice"); // output: add ice
-
-// Data Type Conversions
-
-string stringNum = "2";
-int intNum = Convert.ToInt32(stringNum);
-Console.WriteLine(intNum);
-Console.WriteLine(intNum.GetType());
     }
   }
 }
