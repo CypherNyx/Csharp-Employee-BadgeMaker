@@ -41,6 +41,13 @@ namespace CatWorx.BadgeMaker
       Console.WriteLine("----------------");
       Console.WriteLine("The hyung line includes {0}, {1}, {2} and {3} who is also the group's leader.", bangtanies[1], bangtanies[2], bangtanies[3], bangtanies[0]);
       Console.WriteLine("The maknae line includes {0}, {1}, and {2}.", bangtanies[4], bangtanies[5], bangtanies[6] );
+      Console.WriteLine("----------------");
+
+      // Loops
+      for (int i = 0; i < bangtanies.Count; i++)
+      {
+        Console.WriteLine(bangtanies[i]);
+      }
 
     }
   }
