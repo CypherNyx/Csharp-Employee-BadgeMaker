@@ -18,6 +18,17 @@ num += 100;
 Console.WriteLine(num); //110
 num ++;
 Console.WriteLine(num); //111
+
+bool isCold = true; // Booleans
+Console.WriteLine(isCold ? "drink" : "add ice"); // output: drink
+Console.WriteLine(!isCold ? "drink" : "add ice"); // output: add ice
+
+// Data Type Conversions
+
+string stringNum = "2";
+int intNum = Convert.ToInt32(stringNum);
+Console.WriteLine(intNum);
+Console.WriteLine(intNum.GetType());
     }
   }
 }
