@@ -4,7 +4,7 @@ namespace CatWorx.BadgeMaker
 {
   class Program
   {
-    static void Main(string[] args)
+    static List<string> GetEmployees()
     {
       List<string> employees = new List<string>();
       // Collect user values until the value is an empty string
@@ -20,10 +20,21 @@ namespace CatWorx.BadgeMaker
         }
         employees.Add(input);
       }
+      return employees;
+    }
+
+    static void PrintEmployees(List<string> employees)
+    {
       for (int i = 0; i < employees.Count; i++)
       {
         Console.WriteLine(employees[i]);
       }
+    }
+
+    static void Main(string[] args)
+    {
+      List<string> employees = GetEmployees();
+      PrintEmployees(employees);
     }
   }
 }
