@@ -34,7 +34,7 @@ namespace CatWorx.BadgeMaker
       return employees;
     }
 
-    
+
     async static Task Main(string[] args)
     {
       List<Employee> employees = GetEmployees();
