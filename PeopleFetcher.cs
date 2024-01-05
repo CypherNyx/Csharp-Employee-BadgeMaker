@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace CatWorx.BadgeMaker
 {
@@ -33,9 +35,15 @@ namespace CatWorx.BadgeMaker
       return employees;
     }
 
-    public static List<Employee> GetFromAPI()
+    async public static Task <List<Employee>> GetFromApi()
     {
-      
+      List<Employee> employees = new List<Employee>();
+      using (HttpClient client = new HttpClient())
+      {
+        string response = await client.GetStringAsync("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
+        Console.WriteLine(response);
+      }
+      return employees;
     }
 
   }
