@@ -45,6 +45,15 @@ namespace CatWorx.BadgeMaker
     // make the badges
      async public static Task MakeBadges(List<Employee> employees)
     {
+      //Layout variables
+      int BADGE_WIDTH = 669;
+      int BADGE_HEIGHT = 1044;
+
+      int PHOTO_LEFT_X = 184;
+      int PHOTO_TOP_Y = 215;
+      int PHOTO_RIGHT_X = 486;
+      int PHOTO_BOTTOM_Y = 517;
+
       // instance of HttpClient is disposed after code in the block has run
       using(HttpClient client = new HttpClient())
       {
@@ -53,7 +62,14 @@ namespace CatWorx.BadgeMaker
           SKImage photo = SKImage.FromEncodedData(await client.GetStreamAsync(employees[i].GetPhotoUrl()));
           SKImage background = SKImage.FromEncodedData(File.OpenRead("badge.png"));
 
-          SKData data = background.Encode();
+          SKBitmap badge = new SKBitmap(BADGE_WIDTH, BADGE_HEIGHT);
+          SKCanvas canvas = new SKCanvas(badge);
+
+          canvas.DrawImage(background, new SKRect (0,0, BADGE_WIDTH, BADGE_HEIGHT));
+          canvas.DrawImage(photo, new SKRect(PHOTO_LEFT_X, PHOTO_TOP_Y, PHOTO_RIGHT_X, PHOTO_BOTTOM_Y ));
+
+          SKImage finalImage = SKImage.FromBitmap(badge);
+          SKData data = finalImage.Encode();
           data.SaveTo(File.OpenWrite("data/employeeBadge.png"));
         }
       }
