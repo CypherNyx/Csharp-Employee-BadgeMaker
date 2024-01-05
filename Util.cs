@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Net.Http;
 using SkiaSharp;
 
 namespace CatWorx.BadgeMaker
@@ -43,11 +44,14 @@ namespace CatWorx.BadgeMaker
     // make the badges
      public static void MakeBadges(List<Employee> employees)
     {
-      // create image
-      SKImage newImage = SKImage.FromEncodedData(File.OpenRead("badge.png"));
-
-      SKData data= newImage.Encode();
-      data.SaveTo(File.OpenWrite("data/employeeBadge.png"));
+      // instance of HttpClient is disposed after code in the block has run
+      using(HttpClient client = new HttpClient())
+      {
+        for (int i = 0; i < employees.Count; i++ )
+        {
+          
+        }
+      }
     }
   }
 }
