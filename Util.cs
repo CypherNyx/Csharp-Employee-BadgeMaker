@@ -37,6 +37,11 @@ namespace CatWorx.BadgeMaker
         file.WriteLine(String.Format(template, employees[i].GetID(), employees[i].GetFullName(), employees[i].GetPhotoUrl()));
       }
       }
+    }
+
+    // make the badges
+     public static void MakeBadges(List<Employee> employees)
+    {
 
     }
   }
