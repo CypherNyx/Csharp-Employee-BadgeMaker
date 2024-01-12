@@ -15,7 +15,7 @@ Console app that creates employee security badges.  This application is develope
 
 
 ## Getting Started
-To view the project, simply open the `index.html` file in your web browser. If you want to contribute or explore the codebase, follow the steps below:
+To contribute, run or explore the codebase for this C# command line application, follow these steps below:
 
 1. Clone the repository: `git clone https://github.com/CypherNyx/Csharp-Employee-BadgeMaker.git`
 2. Open the project in VS Code (or a compatible IDE).
@@ -33,6 +33,24 @@ dotnet run
 <br>
 
 ## Screenshots
+### Data Input
+Run the application and create a single employee (or multiple employees) at the command prompt to create a badge image. Don't forget to include the URL for the employee test photo, you can use the a place holder URL as https://placekitten.com/400/400 :
+
+![data1](./data/data_input1.png)
+
+### Badge Preview
+You'll find your new badges neatly saved as PNG files within the `data` folder. They'll look just like this:
+
+![holmesbadge](./data/7410_badge.png)
+
+###  Individual Badge Files:
+Every employee will have their own unique badge, saved as a separate PNG file within the `data` folder. This makes it super easy to share, print, or use each badge individually.
+
+![data2](./data/data_input2.png)
+
+### Consolidated Employee Data:
+To keep track of all employee information in one place, inside the `data` folder, you'll also find a handy CSV file named `employee.csv`. This file stores employee details in a clear, organized format.
+![data3](./data/data_input3.png)
 
 
 
