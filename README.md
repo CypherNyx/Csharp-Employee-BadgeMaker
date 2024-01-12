@@ -1,9 +1,12 @@
 # Csharp-Employee-BadgeMaker
->.NET command line application
+>.NET command line application  
 
 Console app that creates employee security badges.  This application is developed using C# and .NET framework to import libraries that let you read and write to the file system, query APIs, and generate images.
 
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) </br>
+ ![C#](https://img.shields.io/badge/csharp-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
+
+
 
 ## Table of Contents
 - [Getting Started](#getting-started) 
